@@ -116,11 +116,9 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 ## Hints
 
 * Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-
 * Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
-
 * Use Bootstrap to structure your HTML template.
 
 ### Copyright
 
-Trilogy Education Services © 2019. All Rights Reserved.
+Ann McNamara © 2020. All Rights Reserved.
