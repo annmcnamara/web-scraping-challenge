@@ -70,9 +70,8 @@ def scrape_table_data(mars_data, browser):
 
     df = tables[0]
     df.columns = ['Attribute', 'Data']
+    table_html = df.to_html(index=False)
 
-    table_html = re.sub("border=\"1\" class=\"dataframe ", "class=\"", df.head(10).to_html(classes='table'))
-    table_html = table_html.replace('\n', ' ')
   
     mars_data['table'] = table_html
 
