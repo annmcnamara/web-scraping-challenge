@@ -93,53 +93,54 @@ def scrape():
     mars_data['table'] = table_html
 
 
-    # # SCRAPE THE HEMISPHERE IMAGES FROM 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
-    # url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
-    # browser.visit(url)
-    # driver = browser.driver
-    # full_url = driver.current_url
-    # time.sleep(5)
-    # # strip out after third /
-    # base_url = full_url.rsplit('/',2)[0]
+    # SCRAPE THE HEMISPHERE IMAGES FROM 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
+    url = 'https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'
+    browser.visit(url)
+    driver = browser.driver
+    full_url = driver.current_url
+    time.sleep(5)
+    # strip out after third /
+    base_url = full_url.rsplit('/',2)[0]
 
-    # html = browser.html
-    # soup = BeautifulSoup(html, 'html.parser')
+    html = browser.html
+    soup = BeautifulSoup(html, 'html.parser')
 
-    # image_links = soup.find_all('div', class_="description")
-    # for p in image_links:
-    #     print(p.a.text)
-    #     print(p.a['href'])
-    #     print('\n')
+    image_links = soup.find_all('div', class_="description")
+    for p in image_links:
+        print(p.a.text)
+        print(p.a['href'])
+        print('\n')
 
-    # image_urls = []
+    image_urls = []
 
-    # for image in image_links:
-    #     #print(image.a.text.replace(' Enhanced', ""))   
-    #     title = image.a.text.replace(' Enhanced', "")
-    #     dict_item = {'title':title, 'img_url':base_url+image.a['href']}
-    #     image_urls.append(dict_item)
+    for image in image_links:
+        #print(image.a.text.replace(' Enhanced', ""))   
+        title = image.a.text.replace(' Enhanced', "")
+        dict_item = {'title':title, 'img_url':base_url+image.a['href']}
+        image_urls.append(dict_item)
     
-    # hemipshere_image_urls = []
-    # for img_url in image_urls: 
-    #     url   = img_url['img_url']
-    #     title = img_url['title']
-    #     browser.visit(url)
-    #     time.sleep(3)
+    hemisphere_image_urls = []
+    for img_url in image_urls: 
+        url   = img_url['img_url']
+        title = img_url['title']
+        browser.visit(url)
+        time.sleep(3)
 
-    #     html = browser.html
-    #     soup = BeautifulSoup(html, 'html.parser')
+        html = browser.html
+        soup = BeautifulSoup(html, 'html.parser')
     
-    #     image_links = soup.find_all('div', class_="downloads")
-    #     dict_item = {'title':title, 'img_url':image_links[0].a['href']}
-    #     hemipshere_image_urls.append(dict_item)
+        image_links = soup.find_all('div', class_="downloads")
+        dict_item = {'title':title, 'img_url':image_links[0].a['href']}
+        hemisphere_image_urls.append(dict_item)
 
-    # for i in hemipshere_image_urls:
-    #     print(i['title'])
-    #     print(i['img_url'])
+    for i in hemisphere_image_urls:
+        print(i['title'])
+        print(i['img_url'])
 
 
-    # mars_data["hemipshere_image_urls"]     = hemipshere_image_url
-    # print (f" CHECK {mars_data.hemipshere_image_urls[0]} \n")
+    mars_data["hemisphere_image_urls"]    = hemisphere_image_urls
+
+    # print (f" CHECK {mars_data.hemisphere_image_urls[0]} \n")
 
     print("SCRAPED :-) \n\n")
     return mars_data 
