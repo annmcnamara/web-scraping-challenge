@@ -11,56 +11,43 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center">
-      <h1>Mission to  Mars</h1>
+    <div class="jumbotron text-center ">
+      <header><h1> Mission to  Mars</h1></header><br>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
     <!-- Mars Data -->
-    <div class="jumbotron-overlay" id="mars-news">
-      <h2> Latest Mars News </h2>
+    <div class = "container">
+    <div class="row" id="mars-news">
+      <h2 class="header">  Latest Mars News </h2>
       <div class="col-md-12">
-        <h4 class="heading">{{mars_data.headline}}</h4>
-        <small>{{mars_data.news_p}}</small>
+        <p class="page-header h3">{{mars_data.headline}}</p>
+        <p class="display-5">{{mars_data.news_p}}</p>
+
       </div>
     </div>
-
+  </div>
+<br>
 <hr>
-
-<div class="row">
-  <div class="col-sm-6 mb-3 mb-md-0">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <img src="{{mars_data.featured_image}}" alt="Jumbotron Image" class="card-img-top embed-responsive-item">
-        <a href="#!" class="btn btn-primary">Go somewhere</a>
+<div class = "container">
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-8">
+      <h3 class="text-left">Featured Mars Image</h3>
+      <img src="{{mars_data.featured_image}}" alt="{{mars_data.featured_image}}" class="img-responsive fit-image img-thumbnail rounded mx-auto">
       </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#!" class="btn btn-primary">Go somewhere</a>
+     <div class="col-md-4">
+        <h3 class="text-left">Weather on Mars</h3>
+        <h4>{{mars_data.weather}}</h4>
+        <br><hr>
+        <h3 class="text-left"> Mars Facts</h3>
+        <table class="table table-dark table-bordered table-striped">
+          {{mars_data.table | safe}}
+        </table>
       </div>
-    </div>
   </div>
+<div> 
 </div>
-
-
-<div class="jumbotron jumbotron-dark p-100">
-	<img src="{{mars_data.featured_image}}" alt="Jumbotron Image" class="w-50">
-
-	<div class="w-33 jumbotron-overlay overlay-left m-5">
-		<p class="display-5">ola, world!</p>
-		<p>{{mars_data.weather}}</p>
-	</div>
-
-</div>
-
 
 <div class="container">
 
@@ -68,32 +55,46 @@
     <!-- Mars Data -->
     <div class="row" id="mars-news">
       <h2 class="text-center"> Mars Hemispheres </h2>
-      <div class="col-md-12">
-        <div class="view overlay my-4">
-          <div class="row">
-              <div class="col-md-6"> 
-                <p> {{mars_data.hemisphere_image_urls[0].img_url}}</p>
-                <a href={{mars_data.hemisphere_image_urls[0].img_url}} title={{mars_data.hemisphere_image_urls[0].title}}><img src={{mars_data.hemisphere_image_urls[0].img_url}} class="img-fluid" alt={{mars_data.hemisphere_image_urls[0].title}}></a></div><div class="col-md-6">
-                <a href={{mars_data.hemisphere_image_urls[1].img_url}} title={{mars_data.hemisphere_image_urls[1].title}}><img src={{mars_data.hemisphere_image_urls[1].img_url}} class="img-fluid" alt={{mars_data.hemisphere_image_urls[1].title}}></a></div><div class="col-md-6">
 
-                </div>  <!-- end top row -->
-          <br>
-          <div class="row">
-              <div class="col-md-6"> 
-                <a href={{mars_data.hemisphere_image_urls[2].img_url}} title={{mars_data.hemisphere_image_urls[2].title}}><img src={{mars_data.hemisphere_image_urls[2].img_url}} class="img-fluid" alt={{mars_data.hemisphere_image_urls[2].title}}></a></div><div class="col-md-6">
-                <a href={{mars_data.hemisphere_image_urls[3].img_url}} title={{mars_data.hemisphere_image_urls[3].title}}><img src={{mars_data.hemisphere_image_urls[3].img_url}} class="img-fluid" alt={{mars_data.hemisphere_image_urls[3].title}}></a></div><div class="col-md-6">
-              </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[3].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
+              <h5 class="card-title">{{mars_data.hemisphere_image_urls[3].title}}</h5>
 
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[0].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
+              <h5 class="card-title">{{mars_data.hemisphere_image_urls[0].title}}</h5>
 
+            </div>
+          </div>
+        </div>
 
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[1].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
+              <h5 class="card-title">{{mars_data.hemisphere_image_urls[1].title}}</h5>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[2].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
+              <h5 class="card-title">{{mars_data.hemisphere_image_urls[2].title}}</h5>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  </div>
-  </div>
-
-
-
+</div>
 
 </body>
 

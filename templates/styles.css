@@ -14,6 +14,7 @@ body {
     font-style: bold;
     font-variant: small-caps;
     text-transform: none;
+    padding-left:100px;
   }
   
   h3 {
@@ -21,6 +22,11 @@ body {
   }
   h4 {
     font-size: 10px;
+  }
+
+  h5{
+    font-size: 10px;
+    color: #0abab5;
   }
   /* Giving our navbar some padding and a background color */
   .navbar {
@@ -94,7 +100,17 @@ body {
   
   .card-title {
     font: arial;
-    padding: 20px;
+    size:40px;
+    padding: 40px;
+    margin: 0;
+    color: #0abab5;
+    text-align: left;
+  }
+
+  .h5 .card-title {
+    font: arial;
+    size:40px;
+    padding: 40px;
     margin: 0;
     color: #0abab5;
     text-align: left;
@@ -109,11 +125,13 @@ body {
   
   .jumbotron{
     margin-top: 10px;
+    margin-left: 150px!important;
+    padding:200px 0 140px 0;
     background-color:white;
     text-align:center;
-  }
-  
-  
+    color: #FFFFFF;
+
+  }  
   .jumbotron_data{
     margin-top: 20px;
     margin-left: 20px;
@@ -121,7 +139,12 @@ body {
     margin-bottom: 20px;
     text-align:left;
   }
-  
+
+  .fit-image{
+    width: 100%;
+    object-fit: cover;
+    height: 100px; /* only if you want fixed height */
+  }
   
   .border-grow {
     border: solid 0px #0abab5;
@@ -131,4 +154,64 @@ body {
   .border-grow:hover { 
     border-width: 3px; 
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
   
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .wrapper:after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  
+  .wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .card-img{
+    width: 100%!important;
+    height: 20px!important;
+    object-fit: cover;
+ }
