@@ -1,0 +1,134 @@
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */
+body {
+    background: #f1f1f1;
+  }
+  
+  
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    letter-spacing: 0px;
+    color: #0abab5;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: bold;
+    font-variant: small-caps;
+    text-transform: none;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 10px;
+  }
+  /* Giving our navbar some padding and a background color */
+  .navbar {
+    padding: 20px;
+    background: #5191fd;
+  }
+  
+  .navbar .navbar-brand {
+    font-variant: small-caps;
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+    background:navy;  /* Tiffany Blue */
+    }
+  
+  /* Giving our navbar some padding and a background color */
+  @media screen and (min-width: 0px) and (max-width: 786px)
+  {
+    .navbar .navbar-brand {
+    font-variant: small-caps;
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+    background: navy;  /* Tiffany Blue */
+  
+    }
+  }
+  @media screen and (min-width: 787px)
+  {
+    .navbar .navbar-brand {
+    font-variant: small-caps;
+    color: white;
+    font-size: 40px;
+    padding: 5px;
+    background: #0abab5;  /* Tiffany Blue */
+    }
+  }
+  
+  /* Making our navbar li's inline-block elements this makes it so we can have multiple on the same line. Floats could have been used too */
+  .navbar li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 3px;
+  }
+  
+  /* Getting rid of the default link styles here */
+  .navbar li a {
+    color:black;
+    text-decoration: none;
+  
+  }
+  
+  
+  /* Styling the header, giving it a height, a background color, and some top padding */
+  .header {
+    height: 30px;
+    padding-top: 20px;
+  }
+  
+  /* Centering our h1 tag inside our header, giving it a little padding, removing its margin */
+  .header h1 {
+    padding: 20px;
+    margin: 0;
+    color: #0abab5;
+    text-align: left;
+  }
+  
+  .card-title {
+    font: arial;
+    padding: 20px;
+    margin: 0;
+    color: #0abab5;
+    text-align: left;
+  }
+  
+  /* Giving the .post element margin on 3 sides */
+  .post {
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  .jumbotron{
+    margin-top: 10px;
+    background-color:white;
+    text-align:center;
+  }
+  
+  
+  .jumbotron_data{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align:left;
+  }
+  
+  
+  .border-grow {
+    border: solid 0px #0abab5;
+    transition: border-width 0.3s linear;
+  }
+  
+  .border-grow:hover { 
+    border-width: 3px; 
+  }
+  
