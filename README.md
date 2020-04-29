@@ -6,10 +6,15 @@ This project builds a web application that scrapes various websites for data rel
 
 ### Repository Structure
 
-1. A directory for  web scraping called **Missions_to_Mars**.
-    * This directory contains notebook files and a flask app.
-
-2. Screenshots of your the application.
+1. A directory for web scraping called **Missions_to_Mars**.
+    * *mission_to_mars.ipynb* contains all scraping functions in one file
+    * The directory **Individual** contains individual scraping notebook files.
+2. Screenshots of the application and the MongoDB are in the Images folder
+3. *app.py* python script to run the flask app
+4. *scrape_mars.py* python script to scrape data
+5. The *Images* folder contains screenshots and one image for the readme
+6. The *templates* folder contains *index.html* and *css* files
+7. This *README* file
 
 ## Step 1 - Scraping
 
@@ -101,6 +106,9 @@ MongoDB with Flask templating created a new HTML page that displays all of the i
 ![final_app_part1.png](Images/final_app_part1.png)
 ![final_app_part2.png](Images/final_app_part2.png)
 
+* The Mongo Database is called *mars_app* with collection *mars_data_db* looks like this
+![mongodb.png](Images/MongoDB.png)
+
 - - -
 
 ## Step 3 - Submission
@@ -108,16 +116,17 @@ MongoDB with Flask templating created a new HTML page that displays all of the i
 To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
 
 1. The Jupyter Notebook containing the scraping code used.
+    * Note in there are five separate notebooks in the directory *Individual* that contain individual scrapings 
 
-2. Screenshots of your final application.
+2. Screenshots of the final application are shown above
 
-3. Submit the link to your new repository to BootCampSpot.
+3. The link to this repository has been submitted BootCampSpot.
 
-## Hints
+## Additional
 
-* Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-* Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
-* Use Bootstrap to structure your HTML template.
+* Splinter was used to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
+* Pymongo was used for CRUD applications for your database. For this project, the existing document is overwritten each time the `/scrape` url is visited and new data is obtained.
+* Bootstrap was used to structure your HTML template.
 
 ### Copyright
 
