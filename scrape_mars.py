@@ -38,7 +38,7 @@ def scrape_news(mars_data, browser):
 def scrape_twitter(mars_data, browser):
     soup = scrape_site('https://twitter.com/marswxreport?lang=en', browser)
 
-    if (browser.is_element_present_by_tag('div', wait_time=5)):
+    if (browser.is_element_present_by_tag('div', wait_time=15)):  # note twitter was slow to load for me...
         tweet = soup.find('div',class_="css-901oao r-jwli3a r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-bnwqim r-qvutc0")
         mars_weather = tweet.text
 

@@ -99,7 +99,7 @@ MongoDB with Flask templating created a new HTML page that displays all of the i
 
   * The return value is stored in Mongo as a Python dictionary.
 
-* Theroot route `/` that queries the Mongo database and passes the mars data into an HTML template to display the data.
+* The root route `/` that queries the Mongo database and passes the mars data into an HTML template to display the data.
 
 * A template HTML file called `index.html` takes the mars data dictionary and displays all of the data in the appropriate HTML elements. The final site looks like this. 
 
@@ -113,7 +113,7 @@ MongoDB with Flask templating created a new HTML page that displays all of the i
 
 ## Step 3 - Submission
 
-To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
+The following has been uploaded:
 
 1. The Jupyter Notebook containing the scraping code used.
     * Note in there are five separate notebooks in the directory *Individual* that contain individual scrapings 
@@ -125,8 +125,8 @@ To submit your work to BootCampSpot, create a new GitHub repository and upload t
 ## Additional
 
 * Splinter was used to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-* Pymongo was used for CRUD applications for your database. For this project, the existing document is overwritten each time the `/scrape` url is visited and new data is obtained.
-* Bootstrap was used to structure your HTML template.
+* Pymongo was used for CRUD applications for the database. For this project, the existing document is overwritten each time the `/scrape` url is visited and new data is obtained.
+* Bootstrap was used to structure the HTML template.
 
 ### Copyright
 
