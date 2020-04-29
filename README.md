@@ -106,7 +106,7 @@ MongoDB with Flask templating created a new HTML page that displays all of the i
 ![final_app_part1.png](Images/final_app_part1.png)
 ![final_app_part2.png](Images/final_app_part2.png)
 
-* The Mongo Database is called *mars_app* with collection *mars_data_db* looks like this
+* The Mongo Database is called *mars_app* with collection *mars_data_db* looks like this (*click for higher resolution*)
 ![mongodb.png](Images/MongoDB.png)
 
 - - -
