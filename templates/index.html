@@ -32,10 +32,12 @@
 <div class = "container">
 <div class="jumbotron">
   <div class="row">
+    <a href="{{mars_data.featured_image}}" class='tooltipEl' title="Mars Featured Image">
     <div class="col-md-8">
       <h3 class="text-left">Featured Mars Image</h3>
       <img src="{{mars_data.featured_image}}" alt="{{mars_data.featured_image}}" class="img-responsive fit-image img-thumbnail rounded mx-auto">
       </div>
+      </a>
      <div class="col-md-4">
         <h3 class="text-left">Weather on Mars</h3>
         <h4>{{mars_data.weather}}</h4>
@@ -58,45 +60,60 @@
 
       <div class="row">
         <div class="col-sm-6">
+          <a href="{{mars_data.hemisphere_image_urls[3].img_url}}" class='tooltipEl' title={{mars_data.hemisphere_image_urls[3].title}}>
           <div class="card">
             <div class="card-body">
-              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[3].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
-              <h5 class="card-title">{{mars_data.hemisphere_image_urls[3].title}}</h5>
-
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[3].img_url}}  alt={{mars_data.hemisphere_image_urls[3].title}} >
+              <h3 class="card-title">{{mars_data.hemisphere_image_urls[3].title}}</h3>
             </div>
+            </a>
           </div>
         </div>
         <div class="col-sm-6">
+          <a href="{{mars_data.hemisphere_image_urls[0].img_url}}" class='tooltipEl' title={{mars_data.hemisphere_image_urls[0].title}}>
           <div class="card">
             <div class="card-body">
-              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[0].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
-              <h5 class="card-title">{{mars_data.hemisphere_image_urls[0].title}}</h5>
-
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[0].img_url}}  alt={{mars_data.hemisphere_image_urls[0].title}} >
+              <h3 class="card-title">{{mars_data.hemisphere_image_urls[0].title}}</h3>
             </div>
+            </a>
           </div>
         </div>
 
         <div class="col-sm-6">
+          <a href="{{mars_data.hemisphere_image_urls[1].img_url}}" class='tooltipEl' title={{mars_data.hemisphere_image_urls[1].title}}>
           <div class="card">
             <div class="card-body">
-              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[1].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
-              <h5 class="card-title">{{mars_data.hemisphere_image_urls[1].title}}</h5>
-
+              <img class="card-img-top card-img img-responsive img-thumbnail"  src={{mars_data.hemisphere_image_urls[1].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}}  >
+              <h3 class="card-title">{{mars_data.hemisphere_image_urls[1].title}}</h3>
             </div>
+          </a>  
           </div>
         </div>
         <div class="col-sm-6">
+          
+          <a href="{{mars_data.hemisphere_image_urls[2].img_url}}" class='tooltipEl' title={{mars_data.hemisphere_image_urls[2].title}}>
           <div class="card">
             <div class="card-body">
-              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[2].img_url}}  alt={{mars_data.hemisphere_image_urls[1].title}} >
-              <h5 class="card-title">{{mars_data.hemisphere_image_urls[2].title}}</h5>
+              <img class="card-img-top card-img img-responsive img-thumbnail" src={{mars_data.hemisphere_image_urls[2].img_url}}  alt={{mars_data.hemisphere_image_urls[2].title}} >
+              <h3 class="card-title">{{mars_data.hemisphere_image_urls[2].title}}</h3>
             </div>
+            </a>
           </div>
         </div>
       </div>
 </div>
 
 </body>
+
+
+<!-- Script -->
+<script type="text/javascript">
+  $(document).ready(function(){
+   // Initialize
+   $('.tooltipEl').tooltip(); 
+  });
+  </script>
 
 </html>
 
