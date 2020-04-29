@@ -52,9 +52,6 @@ featured_image_url = 'https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA1
 ### Mars Weather
 
 * The latest Mars weather tweet was scraped from  the Mars Weather twitter account [here](https://twitter.com/marswxreport?lang=en).  The tweet text for the weather report was saved as a variable called `mars_weather`.
-* **Note: Be sure you are not signed in to twitter, or scraping may become more difficult.**
-* **Note: Twitter frequently changes how information is presented on their website. If you are having difficulty getting the correct html tag data, consider researching Regular Expression Patterns and how they can be used in combination with the .find() method.**
-
 
 ```python
 # Example:
